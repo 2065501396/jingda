@@ -2465,3 +2465,147 @@ code {
   left: 3rem;
   background-color: #66c655;
 }
+
+/* ============ 光威复材风格样式 ============ */
+.bg-gray-light { background-color: #f5f6f8; }
+
+/* Section 通用 */
+.gwc-section { padding: 5rem 0; }
+.gwc-section-title {
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 2px solid #1a3a5c; padding-bottom: 1rem; margin-bottom: 3rem;
+}
+.gwc-section-title h3 { font-size: 2.6rem; color: #1a3a5c; margin: 0; font-weight: 700; }
+.gwc-section-title .gwc-en {
+  font-size: 1.6rem; color: #999; font-weight: 400; margin-left: 1.5rem;
+  font-family: Arial, sans-serif; letter-spacing: 2px;
+}
+.gwc-more { font-size: 1.4rem; color: #666; text-decoration: none; white-space: nowrap; }
+.gwc-more:hover { color: #1a3a5c; }
+
+/* ============ Banner ============ */
+.gwc-banner { position: relative; margin-top: -3rem; }
+.gwc-banner-slider { position: relative; height: 520px; overflow: hidden; }
+.gwc-banner-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s; }
+.gwc-banner-slide.active { opacity: 1; z-index: 1; }
+.gwc-banner-slide img { width: 100%; height: 100%; object-fit: cover; }
+.gwc-banner-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,20,50,0.55); display: flex; align-items: center;
+}
+.gwc-banner-overlay h2 { color: #fff; font-size: 4.2rem; font-weight: 700; margin-bottom: 1rem; }
+.gwc-banner-overlay p { color: rgba(255,255,255,0.85); font-size: 2rem; }
+.gwc-banner-prev, .gwc-banner-next {
+  position: absolute; z-index: 2; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.2); color: #fff; border: none; font-size: 4rem;
+  width: 50px; height: 80px; cursor: pointer; transition: background 0.3s;
+}
+.gwc-banner-prev:hover, .gwc-banner-next:hover { background: rgba(255,255,255,0.4); }
+.gwc-banner-prev { left: 0; border-radius: 0 8px 8px 0; }
+.gwc-banner-next { right: 0; border-radius: 8px 0 0 8px; }
+.gwc-banner-dots {
+  position: absolute; z-index: 2; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px;
+}
+.gwc-banner-dots .dot {
+  width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: background 0.3s;
+}
+.gwc-banner-dots .dot.active { background: #fff; }
+@media (max-width: 768px) {
+  .gwc-banner-slider { height: 300px; }
+  .gwc-banner-overlay h2 { font-size: 2.4rem; }
+  .gwc-banner-overlay p { font-size: 1.4rem; }
+}
+
+/* ============ 新闻 ============ */
+.gwc-news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.gwc-news-featured a { display: block; color: inherit; text-decoration: none; }
+.gwc-news-featured-img {
+  height: 280px; background-size: cover; background-position: center; border-radius: 8px;
+  position: relative; overflow: hidden;
+}
+.gwc-news-date-badge {
+  position: absolute; top: 15px; left: 15px; background: #1a3a5c; color: #fff;
+  padding: 8px 14px; border-radius: 4px; text-align: center; min-width: 60px;
+}
+.gwc-news-date-badge .day { display: block; font-size: 2.4rem; font-weight: 700; line-height: 1; }
+.gwc-news-date-badge .month { display: block; font-size: 1.2rem; margin-top: 2px; }
+.gwc-news-featured-text { padding: 1.5rem 0; }
+.gwc-news-featured-text h4 { font-size: 1.8rem; color: #1a3a5c; margin-bottom: 0.8rem; }
+.gwc-news-featured-text p { font-size: 1.4rem; color: #666; line-height: 1.8; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.gwc-news-list { display: flex; flex-direction: column; gap: 0; }
+.gwc-news-item {
+  display: flex; align-items: baseline; gap: 1.5rem; padding: 1.4rem 0;
+  border-bottom: 1px dashed #e0e0e0; transition: all 0.3s;
+}
+.gwc-news-item:last-child { border-bottom: none; }
+.gwc-news-item:hover { padding-left: 0.8rem; }
+.gwc-news-item-date {
+  font-size: 1.3rem; color: #999; white-space: nowrap; font-family: Arial, sans-serif;
+}
+.gwc-news-item a {
+  font-size: 1.5rem; color: #333; text-decoration: none; flex: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.gwc-news-item a:hover { color: #1a3a5c; }
+@media (max-width: 768px) {
+  .gwc-news-grid { grid-template-columns: 1fr; }
+  .gwc-news-featured-img { height: 200px; }
+}
+
+/* ============ 产品 ============ */
+.gwc-product-scroll { overflow: hidden; position: relative; }
+.gwc-product-cards { display: flex; gap: 2rem; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 1rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.gwc-product-cards::-webkit-scrollbar { display: none; }
+.gwc-product-card { min-width: 280px; max-width: 280px; flex-shrink: 0; }
+.gwc-product-card a { display: block; text-decoration: none; color: inherit; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: all 0.3s; }
+.gwc-product-card a:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.gwc-product-img { height: 200px; background-size: cover; background-position: center; }
+.gwc-product-info { padding: 1.5rem; }
+.gwc-product-info h5 { font-size: 1.6rem; color: #1a3a5c; margin-bottom: 0.6rem; }
+.gwc-product-info p { font-size: 1.3rem; color: #777; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.gwc-product-nav { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+.gwc-product-nav-btn {
+  width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1a3a5c; background: #fff; color: #1a3a5c; font-size: 2rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;
+}
+.gwc-product-nav-btn:hover { background: #1a3a5c; color: #fff; }
+
+/* ============ 应用案例 ============ */
+.gwc-app-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+.gwc-app-card a { display: block; text-decoration: none; border-radius: 8px; overflow: hidden; position: relative; }
+.gwc-app-img { height: 220px; background-size: cover; background-position: center; transition: transform 0.5s; }
+.gwc-app-card:hover .gwc-app-img { transform: scale(1.08); }
+.gwc-app-label {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem; text-align: center;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; font-size: 1.5rem; font-weight: 500;
+}
+@media (max-width: 768px) { .gwc-app-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ============ 技术能力 ============ */
+.gwc-tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.gwc-tech-image { border-radius: 8px; overflow: hidden; }
+.gwc-tech-image img { width: 100%; height: auto; display: block; }
+.gwc-tech-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.gwc-tech-item { display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.2rem; border-radius: 6px; transition: background 0.3s; }
+.gwc-tech-item:hover { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.gwc-tech-icon { flex-shrink: 0; width: 48px; height: 48px; background: #e8f0f8; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.gwc-tech-text h5 { font-size: 1.6rem; color: #1a3a5c; margin-bottom: 0.3rem; }
+.gwc-tech-text p { font-size: 1.3rem; color: #777; line-height: 1.6; margin: 0; }
+@media (max-width: 768px) { .gwc-tech-grid { grid-template-columns: 1fr; } }
+
+/* ============ Footer ============ */
+.gwc-footer { background: #1a2635; color: #aab4c0; padding: 5rem 0 2rem; margin-top: 3rem; }
+.gwc-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap: 3rem; }
+.gwc-footer-col h5 { color: #fff; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 600; }
+.gwc-footer-col p { font-size: 1.3rem; line-height: 2; margin: 0; }
+.gwc-footer-col ul { list-style: none; padding: 0; margin: 0; }
+.gwc-footer-col ul li { margin-bottom: 0.8rem; }
+.gwc-footer-col ul li a { color: #aab4c0; font-size: 1.3rem; text-decoration: none; transition: color 0.3s; }
+.gwc-footer-col ul li a:hover { color: #fff; }
+.gwc-footer-logo img { filter: brightness(0) invert(1); opacity: 0.85; }
+.gwc-footer-qr { text-align: center; }
+.gwc-footer-qr .qr-placeholder { margin-bottom: 0.8rem; }
+.gwc-footer-qr p { font-size: 1.2rem; }
+.gwc-footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 3rem; padding-top: 1.5rem; text-align: center; }
+.gwc-footer-bottom p { font-size: 1.2rem; margin: 0; }
+.gwc-footer-bottom a { color: #aab4c0; }
+@media (max-width: 768px) { .gwc-footer-grid { grid-template-columns: 1fr 1fr; } }
