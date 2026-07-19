@@ -2597,7 +2597,7 @@ code {
 
 /* ============ Footer ============ */
 .gwc-footer { background: #1a2635; color: #aab4c0; padding: 5rem 0 2rem; margin-top: 3rem; }
-.gwc-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap: 3rem; }
+.gwc-footer-grid { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; gap: 3rem; }
 .gwc-footer-col h5 { color: #fff; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 600; }
 .gwc-footer-col p { font-size: 1.3rem; line-height: 2; margin: 0; }
 .gwc-footer-col ul { list-style: none; padding: 0; margin: 0; }
