@@ -264,7 +264,9 @@ a{color:#1e90ff;text-decoration:none}
 .classic-home-topline .container{display:flex;justify-content:space-between;gap:2rem;padding-top:1.2rem;padding-bottom:1.2rem;color:#355577;font-size:1.5rem}
 .classic-home-topline span{white-space:nowrap}
 .classic-home-body .premium-hero{position:relative;height:54rem;min-height:54rem;max-width:none;margin:2rem auto 0;border:1px solid #6f8fae;border-radius:0;background:#cfdceb;box-shadow:0 0 0 4px #fff,inset 0 0 0 1px #c2d0df}
-.classic-home-body .premium-hero::before{content:'';position:absolute;left:2rem;top:2rem;z-index:2;width:18rem;height:3.6rem;background:linear-gradient(90deg,#f7ecd2,#ead8a6);border:1px solid #9d8657;box-shadow:0.5rem 0.5rem 0 rgba(38,65,96,0.18)}
+.classic-hero-badge{position:absolute;left:2rem;top:2rem;z-index:3;display:flex;flex-direction:column;justify-content:center;gap:0.2rem;min-width:18rem;min-height:4.6rem;padding:0.8rem 1.4rem;background:linear-gradient(90deg,#f7ecd2,#ead8a6);border:1px solid #9d8657;box-shadow:0.5rem 0.5rem 0 rgba(38,65,96,0.18)}
+.classic-hero-badge strong{display:block;color:#6d5627;font-size:1.6rem;letter-spacing:1.2px;line-height:1.1}
+.classic-hero-badge span{display:block;color:#7f6940;font-size:1.2rem;letter-spacing:2px;line-height:1.1}
 .classic-home-body .premium-hero-slide img,
 .classic-home-body .premium-hero-overlay{border-radius:0}
 .classic-home-body .premium-hero-slide img{transform:scale(var(--classic-hero-image-scale,1.12));transition:transform 0.45s ease,opacity 1.2s ease}
@@ -272,13 +274,13 @@ a{color:#1e90ff;text-decoration:none}
 .classic-home-body .premium-hero-overlay{background:linear-gradient(90deg,rgba(18,43,69,0.58) 0%,rgba(18,43,69,0.2) 52%,rgba(18,43,69,0.62) 100%);justify-content:flex-start;text-align:left}
 .classic-home-body .premium-hero-overlay .container{animation:none}
 .classic-hero-content{display:grid;grid-template-columns:minmax(0,1.4fr) 34rem;gap:2.4rem;align-items:end;width:100%;padding:8rem 4rem 9rem}
-.classic-hero-heading{padding:3.4rem 4rem;background:rgba(10,27,44,0.58);border:1px solid rgba(255,255,255,0.35);box-shadow:0.9rem 0.9rem 0 rgba(14,31,49,0.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.classic-hero-heading{padding:2.2rem 0 2.2rem 0;background:none;border:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 .classic-hero-kicker{display:inline-block;margin-bottom:1.2rem;padding:0.5rem 1.2rem;background:#1f4e80;color:#fff;font-size:1.2rem;letter-spacing:2px}
-.classic-home-body .premium-hero-overlay h1{margin:0 0 1.4rem;color:#fff;font-size:5.8rem;letter-spacing:2px;text-shadow:0 2px 10px rgba(0,0,0,0.35)}
-.classic-home-body .premium-hero-overlay p{margin:0;color:rgba(255,255,255,0.9);font-size:2.35rem;line-height:1.8;max-width:none;letter-spacing:0}
+.classic-home-body .premium-hero-overlay h1{margin:0 0 1.4rem;color:#fff;font-size:5.8rem;letter-spacing:2px;text-shadow:0 3px 18px rgba(0,0,0,0.52)}
+.classic-home-body .premium-hero-overlay p{margin:0;color:rgba(255,255,255,0.96);font-size:2.35rem;line-height:1.8;max-width:none;letter-spacing:0;text-shadow:0 2px 12px rgba(0,0,0,0.45)}
 .classic-hero-actions{display:flex;gap:1.4rem;margin-top:2.4rem}
-.classic-hero-actions a{display:inline-block;padding:1.1rem 2.2rem;background:#1f4e80;border:1px solid #17385b;color:#fff;font-size:1.55rem;font-weight:700;letter-spacing:1px}
-.classic-hero-actions a:last-child{background:#f3e8c7;color:#6c5424;border-color:#b49a62}
+.classic-hero-actions a{display:inline-block;padding:1.1rem 2.2rem;background:rgba(14,37,60,0.42);border:1px solid rgba(255,255,255,0.52);color:#fff;font-size:1.55rem;font-weight:700;letter-spacing:1px;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.classic-hero-actions a:last-child{background:rgba(243,232,199,0.18);color:#fff;border-color:rgba(255,255,255,0.58)}
 .classic-hero-sidecard{padding:2.4rem 2.6rem 2.8rem;background:rgba(12,32,53,0.84);border:1px solid rgba(255,255,255,0.35);box-shadow:0.7rem 0.7rem 0 rgba(15,28,45,0.55)}
 .classic-hero-sidecard h3{margin:0 0 1.6rem;color:#fff;font-size:2.6rem;letter-spacing:1px}
 .classic-hero-sidecard ul{list-style:none;margin:0;padding:0}
