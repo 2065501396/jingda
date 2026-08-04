@@ -10,10 +10,12 @@
   <link rel="shortcut icon" href="/jingda/images/favicon.ico">
 <link rel="stylesheet" href="/jingda/css/style.css">
 </head>
-<body>
+<body class="classic-home-body">
+<div class="classic-scale-shell">
+<div class="classic-scale-stage" id="classicScaleStage">
 <main class="main">
 
-<header id="header" class="header header-absolute">
+<header id="header" class="header classic-home-header">
   <div class="container">
     <nav class="navbar d-flex align-items-center">
       <a class="brand" href="/jingda/"><img class="logo lazyload" data-src="/jingda/images/logo2.png" alt="山东靖达智能装备有限公司"></a>
@@ -29,20 +31,33 @@
   </div>
 </header>
 
+<div class="classic-home-topline">
+  <div class="container">
+    <span>山东靖达智能装备有限公司欢迎您</span>
+    <span>服务热线：0631-5586617</span>
+    <span>专注碳纤维复合材料智能装备研发与制造</span>
+  </div>
+</div>
+
 <!-- ===== Hero Banner ===== -->
 <section class="premium-hero" id="heroBanner">
   <div class="premium-hero-slider">
     <div class="premium-hero-slide active">
       <img src="/jingda/images/serve/9.png" alt="">
-      <div class="premium-hero-overlay"><div class="container"><h1>山东靖达智能装备</h1><p>专注碳纤维复合材料智能装备研发与制造</p></div></div>
+      <div class="premium-hero-overlay"><div class="container"><span class="classic-hero-kicker">企业官网</span><h1>山东靖达智能装备</h1><p>专注碳纤维复合材料智能装备研发与制造</p></div></div>
     </div>
     <div class="premium-hero-slide">
       <img src="/jingda/images/serve/3.jpg" alt="">
-      <div class="premium-hero-overlay"><div class="container"><h1>自主创新 · 精益求精</h1><p>为高端制造提供先进的智能装备解决方案</p></div></div>
+      <div class="premium-hero-overlay"><div class="container"><span class="classic-hero-kicker">企业官网</span><h1>自主创新 · 精益求精</h1><p>为高端制造提供先进的智能装备解决方案</p></div></div>
     </div>
   </div>
   <div class="premium-hero-dots"><span class="active" onclick="heroGo(0)"></span><span onclick="heroGo(1)"></span></div>
   <div class="premium-hero-arrows"><button onclick="heroPrev()">‹</button><button onclick="heroNext()">›</button></div>
+  <div class="classic-hero-info">
+    <div><strong>主营方向</strong><span>碳纤维复合材料智能装备</span></div>
+    <div><strong>服务领域</strong><span>航空航天 / 能源电子 / 医疗器械 / 海洋工程</span></div>
+    <div><strong>企业定位</strong><span>研发、设计、制造、销售一体化</span></div>
+  </div>
 </section>
 
 <!-- ===== 产品服务 ===== -->
@@ -156,6 +171,8 @@
 </footer>
 
 </main>
+</div>
+</div>
 
 <div id="mobile-nav-dimmer"></div>
 <div id="mobile-nav"><div id="mobile-nav-inner">
@@ -177,17 +194,7 @@
 let heroIdx=0;const heroSlides=document.querySelectorAll('.premium-hero-slide'),heroDots=document.querySelectorAll('.premium-hero-dots span');
 function heroShow(n){heroSlides.forEach(s=>s.classList.remove('active'));heroDots.forEach(d=>d.classList.remove('active'));heroIdx=(n+heroSlides.length)%heroSlides.length;heroSlides[heroIdx].classList.add('active');heroDots[heroIdx].classList.add('active')}
 function heroNext(){heroShow(heroIdx+1)}function heroPrev(){heroShow(heroIdx-1)}function heroGo(n){heroShow(n)}
-setInterval(heroNext,6000);
-
-// ===== Header Scroll =====
-const header=document.getElementById('header');
-let lastScroll=0;
-window.addEventListener('scroll',()=>{
-  const y=window.pageYOffset;
-  if(y>80&&y>lastScroll){header.classList.add('header-scrolled')}
-  else if(y<60){header.classList.remove('header-scrolled')}
-  lastScroll=y;
-});
+if(heroSlides.length>1){setInterval(heroNext,6000)}
 
 // ===== Scroll Animations =====
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.15});
@@ -197,6 +204,24 @@ document.querySelectorAll('.fade-up,.fade-in').forEach(el=>observer.observe(el))
 let counted=false;
 const statObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting&&!counted){counted=true;document.querySelectorAll('.premium-stat .num').forEach(el=>{const t=parseInt(el.getAttribute('data-target')),d=Math.max(400,1200/t);let c=0;const iv=setInterval(()=>{c++;el.textContent=c+(t>=100?'+':'');if(c>=t)clearInterval(iv)},d)})}})},{threshold:0.5});
 document.querySelectorAll('.premium-stats').forEach(el=>statObserver.observe(el));
+
+// ===== Classic Fixed Canvas Scale =====
+(function(){
+  const shell=document.querySelector('.classic-scale-shell');
+  const stage=document.getElementById('classicScaleStage');
+  if(!shell||!stage)return;
+  const baseWidth=1440;
+  const minScale=0.58;
+  const maxScale=1.15;
+  function updateClassicScale(){
+    const scale=Math.max(minScale,Math.min(maxScale,window.innerWidth/baseWidth));
+    stage.style.setProperty('--classic-scale',scale.toFixed(4));
+    shell.style.height=`${stage.offsetHeight*scale}px`;
+  }
+  window.addEventListener('resize',updateClassicScale);
+  window.addEventListener('load',updateClassicScale);
+  updateClassicScale();
+})();
 </script>
 </body>
 </html>
