@@ -44,11 +44,51 @@
   <div class="premium-hero-slider">
     <div class="premium-hero-slide active">
       <img src="/jingda/images/serve/9.png" alt="">
-      <div class="premium-hero-overlay"><div class="container"><span class="classic-hero-kicker">企业官网</span><h1>山东靖达智能装备</h1><p>专注碳纤维复合材料智能装备研发与制造</p></div></div>
+      <div class="premium-hero-overlay">
+        <div class="container classic-hero-content">
+          <div class="classic-hero-heading">
+            <span class="classic-hero-kicker">企业官网</span>
+            <h1>山东靖达智能装备</h1>
+            <p>专注碳纤维复合材料智能装备研发与制造</p>
+            <div class="classic-hero-actions">
+              <a href="/jingda/products/">产品服务</a>
+              <a href="/jingda/about/">关于我们</a>
+            </div>
+          </div>
+          <div class="classic-hero-sidecard">
+            <h3>核心方向</h3>
+            <ul>
+              <li>碳纤维预浸料检测</li>
+              <li>蜂窝片粘接与植入设备</li>
+              <li>机器人与海洋智能装备</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="premium-hero-slide">
       <img src="/jingda/images/serve/3.jpg" alt="">
-      <div class="premium-hero-overlay"><div class="container"><span class="classic-hero-kicker">企业官网</span><h1>自主创新 · 精益求精</h1><p>为高端制造提供先进的智能装备解决方案</p></div></div>
+      <div class="premium-hero-overlay">
+        <div class="container classic-hero-content">
+          <div class="classic-hero-heading">
+            <span class="classic-hero-kicker">企业官网</span>
+            <h1>自主创新 · 精益求精</h1>
+            <p>为高端制造提供先进的智能装备解决方案</p>
+            <div class="classic-hero-actions">
+              <a href="/jingda/stories/">查看案例</a>
+              <a href="/jingda/news/">新闻动态</a>
+            </div>
+          </div>
+          <div class="classic-hero-sidecard">
+            <h3>服务领域</h3>
+            <ul>
+              <li>航空航天与军工制造</li>
+              <li>能源电子与医疗器械</li>
+              <li>海洋工程与智慧装备</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="premium-hero-dots"><span class="active" onclick="heroGo(0)"></span><span onclick="heroGo(1)"></span></div>
@@ -211,11 +251,13 @@ document.querySelectorAll('.premium-stats').forEach(el=>statObserver.observe(el)
   const stage=document.getElementById('classicScaleStage');
   if(!shell||!stage)return;
   const baseWidth=1440;
-  const minScale=0.58;
-  const maxScale=1.15;
+  const minScale=0.6;
+  const maxScale=1.08;
   function updateClassicScale(){
     const scale=Math.max(minScale,Math.min(maxScale,window.innerWidth/baseWidth));
+    const heroImageScale=Math.max(1.08,Math.min(1.24,1.08+((scale-minScale)/(maxScale-minScale||1))*0.16));
     stage.style.setProperty('--classic-scale',scale.toFixed(4));
+    stage.style.setProperty('--classic-hero-image-scale',heroImageScale.toFixed(4));
     shell.style.height=`${stage.offsetHeight*scale}px`;
   }
   window.addEventListener('resize',updateClassicScale);
