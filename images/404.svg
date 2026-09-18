@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="404">
+  <rect width="640" height="360" fill="#f5f7fa"/>
+  <text x="320" y="170" font-family="Helvetica,Arial,sans-serif" font-size="120" font-weight="700" fill="#1f4e80" text-anchor="middle">404</text>
+  <text x="320" y="225" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="22" fill="#66788c" text-anchor="middle">页面不存在或已被移除</text>
+  <text x="320" y="258" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" fill="#8595a8" text-anchor="middle">Page Not Found</text>
+</svg>
