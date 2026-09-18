@@ -357,3 +357,24 @@ a{color:#1e90ff;text-decoration:none}
   .jd-detail-body h1{font-size:2.2rem}
   .jd-page-title{font-size:2.1rem}
 }
+
+/* ============ 产品详情页：技术资料区 ============ */
+.jd-detail-alias{margin:0 0 1rem;color:#1f4e80;font-size:1.45rem;font-weight:600}
+.jd-doc{margin-top:1.6rem;padding-top:0.6rem}
+.jd-doc h2{margin:4rem 0 1.8rem;padding-bottom:1rem;border-bottom:2px solid #dbe3ec;color:#17385b;font-size:2.2rem;font-weight:700}
+.jd-doc h3{margin:2.6rem 0 1.2rem;color:#1f4e80;font-size:1.75rem;font-weight:600}
+.jd-doc ol,.jd-doc ul{margin:0 0 1.6rem;padding-left:2.4rem;color:#5d6d7d;font-size:1.55rem;line-height:1.95}
+.jd-doc ol li,.jd-doc ul li{margin-bottom:0.9rem}
+.jd-doc li strong{color:#17385b}
+.jd-doc p{color:#5d6d7d;font-size:1.55rem;line-height:1.95}
+.jd-spec{width:100%;border-collapse:collapse;margin:0 0 2rem;font-size:1.45rem}
+.jd-spec th,.jd-spec td{border:1px solid #dbe3ec;padding:1rem 1.4rem;text-align:left;vertical-align:top;line-height:1.8}
+.jd-spec th{width:22rem;background:#f5f7fa;color:#17385b;font-weight:600}
+.jd-spec td{color:#5d6d7d}
+.jd-spec tr:nth-child(even) td{background:#fcfdfe}
+@media(max-width:768px){
+  .jd-doc h2{font-size:1.9rem;margin-top:3.2rem}
+  .jd-doc h3{font-size:1.6rem}
+  .jd-spec th,.jd-spec td{padding:0.8rem 1rem;font-size:1.35rem}
+  .jd-spec th{width:11rem}
+}
