@@ -31,10 +31,14 @@ h1,.h1{font-size:4rem}h2,.h2{font-size:3.2rem}h3,.h3{font-size:2.8rem}h4,.h4{fon
 .line-clamp-1{-webkit-line-clamp:1}.line-clamp-2{-webkit-line-clamp:2}
 a{color:#1e90ff;text-decoration:none}
 
-/* Container */
+/* Container —— 全站统一宽度基准：导航、内容、页脚都用同一个 .container，
+   保证每个页面从上到下的左右边缘严格对齐 */
 .container,.container-fluid{position:relative;margin:0 auto}
-.container{max-width:114rem;padding-right:1rem;padding-left:1rem}
-@media(min-width:114rem){.container{padding-right:0;padding-left:0}}
+.container{width:100%;max-width:120rem;padding-right:1rem;padding-left:1rem}
+@media(max-width:768px){
+  .container{padding-right:1.6rem;padding-left:1.6rem}
+  .row,.row-row{margin-left:-1.6rem;margin-right:-1.6rem}
+}
 
 /* Header */
 .header{position:relative;z-index:99;margin-bottom:3rem;box-shadow:0 0.5rem 1rem rgba(33,37,41,0.025);transition:all 0.4s}
@@ -242,65 +246,83 @@ a{color:#1e90ff;text-decoration:none}
 .toc-list .toc-list-item .toc-link{display:inline-block;padding:0.25rem 0;color:#6c757d}
 .toc-list .toc-list-item.is-active-li>.toc-link{color:#1e90ff}
 
-/* ============ SIMPLE HOME PAGE (jd-home) ============ */
+/* ============ 全站统一：导航 / 服务热线条 / 页脚 ============ */
+.jd-header{margin:0;background:#1f4e80;box-shadow:none}
+.jd-navbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:8.4rem;gap:1rem}
+.jd-navbar .brand{margin:0;flex:0 0 auto}
+.jd-navbar .brand .logo{display:block;height:5rem}
+.jd-nav{display:flex;flex-wrap:wrap;align-items:center;list-style:none;margin:0;padding:0}
+.jd-nav a{display:block;padding:1.3rem 1.8rem;color:#e6eef7;font-size:1.65rem;font-weight:600;letter-spacing:1px;text-decoration:none;transition:background 0.2s,color 0.2s}
+.jd-nav a:hover,.jd-nav li.active a{background:rgba(255,255,255,0.16);color:#fff}
+@media(min-width:769px){.jd-nav li:last-child a{padding-right:0}}
+@media(max-width:768px){
+  .jd-navbar{justify-content:center;padding:1.2rem 0;min-height:0}
+  .jd-nav{justify-content:center}
+  .jd-nav a{padding:0.9rem 1.2rem;font-size:1.5rem}
+}
+.jd-topline{background:#fff;border-bottom:1px solid #dbe3ec}
+.jd-topline .container{padding-top:1.2rem;padding-bottom:1.2rem;text-align:center;color:#1f4e80;font-size:1.6rem;font-weight:600;letter-spacing:1px}
+
+.jd-footer{margin:0;background:#1f4e80;color:#d8e3ef;padding:4rem 0 2rem}
+.jd-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3.2rem}
+.jd-footer-col h5{display:inline-block;margin:0 0 1.6rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(255,255,255,0.25);color:#fff;font-size:1.8rem;font-weight:600}
+.jd-footer-col p{margin:0 0 0.9rem;font-size:1.5rem;line-height:1.8}
+.jd-footer-col p:last-child{margin-bottom:0}
+.jd-footer-col ul{list-style:none;margin:0;padding:0}
+.jd-footer-col ul li{margin-bottom:0.9rem}
+.jd-footer-col ul li a{color:#d8e3ef;font-size:1.5rem;text-decoration:none;transition:color 0.2s}
+.jd-footer-col ul li a:hover{color:#fff;text-decoration:underline}
+.jd-footer-bottom{margin-top:3.2rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,0.18);text-align:center;font-size:1.3rem;line-height:1.9}
+.jd-footer-bottom p{margin:0}
+.jd-footer-bottom a{color:#d8e3ef}
+@media(max-width:768px){
+  .jd-footer{padding:3rem 0 1.6rem}
+  .jd-footer-grid{grid-template-columns:1fr;gap:2.4rem}
+}
+
+/* ============ 首页 ============ */
 .jd-home{background:#f5f7fa;color:#24374a}
 .jd-home .main{height:auto}
-.jd-home .container{width:100%;max-width:120rem;margin:0 auto;padding-left:2.4rem;padding-right:2.4rem}
-@media(max-width:600px){.jd-home .container{padding-left:1.6rem;padding-right:1.6rem}}
 
-/* Header */
-.jd-home .jd-header{margin:0;background:#1f4e80;box-shadow:none}
-.jd-home .jd-navbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:8.4rem;gap:1rem}
-.jd-home .jd-navbar .brand{margin:0;flex:0 0 auto}
-.jd-home .jd-navbar .brand .logo{display:block;height:5rem}
-.jd-home .jd-nav{display:flex;flex-wrap:wrap;align-items:center;list-style:none;margin:0;padding:0}
-.jd-home .jd-nav a{display:block;padding:1.3rem 1.8rem;color:#e6eef7;font-size:1.65rem;font-weight:600;letter-spacing:1px;text-decoration:none;transition:background 0.2s,color 0.2s}
-.jd-home .jd-nav a:hover,.jd-home .jd-nav li.active a{background:rgba(255,255,255,0.16);color:#fff}
-@media(min-width:769px){.jd-home .jd-nav li:last-child a{padding-right:0}}
-@media(max-width:768px){
-  .jd-home .jd-navbar{justify-content:center;padding:1.2rem 0;min-height:0}
-  .jd-home .jd-nav{justify-content:center}
-  .jd-home .jd-nav a{padding:0.9rem 1.2rem;font-size:1.5rem}
-}
+/* 图片轮播：统一按容器比例裁切铺满，消除“有的铺满有的留白” */
+.jd-slider{padding:2.8rem 0 2rem}
+.jd-slider-frame{position:relative;width:100%;aspect-ratio:16/10;background:#e9eef4;overflow:hidden}
+.jd-slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 0.9s ease;pointer-events:none}
+.jd-slide.active{opacity:1;pointer-events:auto}
+.jd-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.jd-arrow{position:absolute;top:50%;z-index:3;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:4.4rem;height:4.4rem;padding:0;border:1px solid #c3d0de;background:rgba(255,255,255,0.88);color:#1f4e80;font-size:2.6rem;line-height:1;cursor:pointer;transition:background 0.2s,color 0.2s,border-color 0.2s}
+.jd-arrow:hover{background:#1f4e80;border-color:#1f4e80;color:#fff}
+.jd-prev{left:1.4rem}
+.jd-next{right:1.4rem}
+.jd-dots{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:1.8rem}
+.jd-dots button{width:1.2rem;height:1.2rem;padding:0;border:1px solid #9db2c8;border-radius:50%;background:#fff;cursor:pointer;transition:all 0.2s}
+.jd-dots button.active{width:3.2rem;border-radius:0.6rem;background:#1f4e80;border-color:#1f4e80}
 
-/* Topline */
-.jd-home .jd-topline{background:#fff;border-bottom:1px solid #dbe3ec}
-.jd-home .jd-topline .container{padding-top:1.2rem;padding-bottom:1.2rem;text-align:center;color:#1f4e80;font-size:1.6rem;font-weight:600;letter-spacing:1px}
-
-/* Slider */
-.jd-home .jd-slider{padding:2.8rem 0 2rem}
-.jd-home .jd-slider-frame{position:relative;width:100%;aspect-ratio:16/10;background:#e9eef4;overflow:hidden}
-.jd-home .jd-slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 0.9s ease;pointer-events:none}
-.jd-home .jd-slide.active{opacity:1;pointer-events:auto}
-.jd-home .jd-slide img{display:block;width:100%;height:100%;object-fit:contain}
-.jd-home .jd-arrow{position:absolute;top:50%;z-index:3;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:4.4rem;height:4.4rem;padding:0;border:1px solid #c3d0de;background:rgba(255,255,255,0.88);color:#1f4e80;font-size:2.6rem;line-height:1;cursor:pointer;transition:background 0.2s,color 0.2s,border-color 0.2s}
-.jd-home .jd-arrow:hover{background:#1f4e80;border-color:#1f4e80;color:#fff}
-.jd-home .jd-prev{left:1.4rem}
-.jd-home .jd-next{right:1.4rem}
-.jd-home .jd-dots{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:1.8rem}
-.jd-home .jd-dots button{width:1.2rem;height:1.2rem;padding:0;border:1px solid #9db2c8;border-radius:50%;background:#fff;cursor:pointer;transition:all 0.2s}
-.jd-home .jd-dots button.active{width:3.2rem;border-radius:0.6rem;background:#1f4e80;border-color:#1f4e80}
-@media(max-width:768px){
-  .jd-home .jd-slider{padding:1.6rem 0 1.2rem}
-  .jd-home .jd-slider-frame{aspect-ratio:4/3}
-  .jd-home .jd-arrow{width:3.6rem;height:3.6rem;font-size:2rem}
-  .jd-home .jd-prev{left:0.8rem}
-  .jd-home .jd-next{right:0.8rem}
-}
-
-/* Footer */
-.jd-home .jd-footer{margin:0;background:#1f4e80;color:#d8e3ef;padding:4rem 0 2rem}
-.jd-home .jd-footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:3.2rem}
-.jd-home .jd-footer-col h5{display:inline-block;margin:0 0 1.6rem;padding-bottom:0.8rem;border-bottom:1px solid rgba(255,255,255,0.25);color:#fff;font-size:1.8rem;font-weight:600}
-.jd-home .jd-footer-col p{margin:0 0 0.9rem;font-size:1.5rem;line-height:1.8}
-.jd-home .jd-footer-col p:last-child{margin-bottom:0}
-.jd-home .jd-footer-col ul{list-style:none;margin:0;padding:0}
-.jd-home .jd-footer-col ul li{margin-bottom:0.9rem}
-.jd-home .jd-footer-col ul li a{color:#d8e3ef;font-size:1.5rem;text-decoration:none;transition:color 0.2s}
-.jd-home .jd-footer-col ul li a:hover{color:#fff;text-decoration:underline}
-.jd-home .jd-footer-bottom{margin-top:3.2rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,0.18);text-align:center;font-size:1.3rem;line-height:1.9}
-.jd-home .jd-footer-bottom a{color:#d8e3ef}
-@media(max-width:768px){
-  .jd-home .jd-footer{padding:3rem 0 1.6rem}
-  .jd-home .jd-footer-grid{grid-template-columns:1fr;gap:2.4rem}
+/* 产品服务 */
+.jd-products{padding:1.6rem 0 4.4rem}
+.jd-section-title{margin-bottom:3.4rem;text-align:center}
+.jd-section-title h2{margin:0;color:#17385b;font-size:2.8rem;font-weight:700;letter-spacing:2px}
+.jd-section-title span{display:block;margin-top:0.8rem;color:#8595a8;font-size:1.3rem;letter-spacing:3px;text-transform:uppercase}
+.jd-section-title::after{content:'';display:block;width:6rem;height:0.3rem;margin:1.6rem auto 0;background:#1f4e80}
+.jd-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem}
+.jd-product-card{display:block;background:#fff;border:1px solid #dbe3ec;color:inherit;text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s}
+.jd-product-card:hover{border-color:#1f4e80;box-shadow:0 6px 20px rgba(31,78,128,0.1)}
+.jd-product-img{aspect-ratio:4/3;overflow:hidden;background:#eef2f6}
+.jd-product-img img{display:block;width:100%;height:100%;object-fit:cover}
+.jd-product-body{padding:2rem 2.2rem 2.4rem}
+.jd-tag{display:inline-block;margin-bottom:1rem;padding:0.3rem 1rem;background:#1f4e80;color:#fff;font-size:1.25rem}
+.jd-product-body h3{margin:0 0 0.8rem;color:#17385b;font-size:1.9rem;font-weight:600}
+.jd-product-body p{margin:0;color:#66788c;font-size:1.4rem;line-height:1.85}
+.jd-more{margin-top:3.2rem;text-align:center}
+.jd-more a{display:inline-block;padding:1.1rem 3rem;border:1px solid #1f4e80;color:#1f4e80;font-size:1.55rem;text-decoration:none;transition:background 0.2s,color 0.2s}
+.jd-more a:hover{background:#1f4e80;color:#fff}
+@media(max-width:992px){.jd-product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){
+  .jd-product-grid{grid-template-columns:1fr;gap:1.8rem}
+  .jd-slider{padding:1.6rem 0 1.2rem}
+  .jd-slider-frame{aspect-ratio:4/3}
+  .jd-arrow{width:3.6rem;height:3.6rem;font-size:2rem}
+  .jd-prev{left:0.8rem}
+  .jd-next{right:0.8rem}
+  .jd-section-title h2{font-size:2.3rem}
 }
