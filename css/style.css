@@ -326,3 +326,34 @@ a{color:#1e90ff;text-decoration:none}
   .jd-next{right:0.8rem}
   .jd-section-title h2{font-size:2.3rem}
 }
+
+/* ============ 产品详情页 ============ */
+.jd-crumb{padding:2.2rem 0 0;color:#7b8a9c;font-size:1.4rem}
+.jd-crumb a{color:#1f4e80;text-decoration:none}
+.jd-crumb a:hover{text-decoration:underline}
+.jd-crumb em{margin:0 0.8rem;font-style:normal;color:#b3c0cd}
+.jd-detail{display:grid;grid-template-columns:1.05fr 1fr;gap:3.6rem;align-items:start;padding:2.4rem 0 1rem}
+.jd-detail-img{background:#fff;border:1px solid #dbe3ec}
+.jd-detail-img img{display:block;width:100%;height:auto}
+.jd-detail-body h1{margin:0 0 1.4rem;color:#17385b;font-size:2.8rem;font-weight:700;line-height:1.35}
+.jd-detail-body p{margin:0 0 1.4rem;color:#5d6d7d;font-size:1.6rem;line-height:2}
+.jd-detail-info{margin:2.2rem 0 0;padding:2rem 2.2rem;background:#f5f7fa;border:1px solid #dbe3ec}
+.jd-detail-info p{margin:0 0 0.8rem;font-size:1.5rem;color:#4a5b6e}
+.jd-detail-info p:last-child{margin-bottom:0}
+.jd-detail-info strong{color:#17385b}
+.jd-detail-links{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:1.2rem}
+.jd-detail-links a{display:inline-block;padding:1rem 2.2rem;background:#1f4e80;color:#fff;font-size:1.5rem;text-decoration:none}
+.jd-detail-links a:hover{background:#17385b}
+.jd-detail-links a.ghost{background:#fff;color:#1f4e80;border:1px solid #1f4e80}
+.jd-detail-links a.ghost:hover{background:#1f4e80;color:#fff}
+.jd-pager{display:flex;justify-content:space-between;gap:1.6rem;margin-top:3.2rem;padding:2rem 0 3.6rem;border-top:1px solid #dbe3ec}
+.jd-pager a{color:#1f4e80;font-size:1.5rem;text-decoration:none}
+.jd-pager a:hover{text-decoration:underline}
+.jd-page-title{margin:0 0 0.6rem;color:#17385b;font-size:2.6rem;font-weight:700}
+.jd-page-sub{margin:0 0 3rem;color:#8595a8;font-size:1.4rem}
+.jd-group-title{margin:4.4rem 0 2.4rem;padding-bottom:1.2rem;border-bottom:2px solid #dbe3ec;color:#17385b;font-size:2.2rem;font-weight:700}
+@media(max-width:768px){
+  .jd-detail{grid-template-columns:1fr;gap:2.2rem}
+  .jd-detail-body h1{font-size:2.2rem}
+  .jd-page-title{font-size:2.1rem}
+}
