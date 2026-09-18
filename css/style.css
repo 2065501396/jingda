@@ -378,3 +378,7 @@ a{color:#1e90ff;text-decoration:none}
   .jd-spec th,.jd-spec td{padding:0.8rem 1rem;font-size:1.35rem}
   .jd-spec th{width:11rem}
 }
+
+/* 详情页要点提示块 */
+.jd-note{margin:2rem 0;padding:1.6rem 2rem;background:#f2f7fc;border-left:4px solid #1f4e80;color:#3f5567;font-size:1.5rem;line-height:1.9}
+.jd-note strong{color:#17385b}
