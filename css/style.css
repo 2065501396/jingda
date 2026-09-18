@@ -382,3 +382,11 @@ a{color:#1e90ff;text-decoration:none}
 /* 详情页要点提示块 */
 .jd-note{margin:2rem 0;padding:1.6rem 2rem;background:#f2f7fc;border-left:4px solid #1f4e80;color:#3f5567;font-size:1.5rem;line-height:1.9}
 .jd-note strong{color:#17385b}
+
+/* ============ 关于页：资质认证 ============ */
+.cert-intro{margin:0 0 1.8rem;color:#5d6d7d;font-size:1.55rem;line-height:1.95}
+.cert-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:2.4rem;margin:0 0 1rem}
+.cert-gallery figure{margin:0;background:#fff;border:1px solid #dbe3ec;padding:1.2rem}
+.cert-gallery img{display:block;width:100%;height:auto}
+.cert-gallery figcaption{margin-top:1rem;color:#7b8a9c;font-size:1.35rem;text-align:center;line-height:1.7}
+@media(max-width:600px){.cert-gallery{grid-template-columns:1fr;gap:1.8rem}}
