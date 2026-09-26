@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <base href="/jingda/">
   <meta name="keywords" content="山东靖达智能装备有限公司,碳纤维预浸料检测,声学隔膜植入,蜂窝片粘接,打磨机器人,水下机器人">
-  <meta name="description" content="山东靖达智能装备有限公司专注于碳纤维复合材料智能装备研发与制造，产品涵盖预浸料线扫描检测、声学隔膜植入、蜂窝片粘接、打磨机器人、水下机器人等领域。">
+  <meta name="description" content="山东靖达智能装备有限公司专注于碳纤维复合材料智能装备研发与制造，产品涵盖预浸料线扫描检测、声学隔膜自动植入、蜂窝片节点胶接、航天壳体打磨机器人、水下捕捞与清理机器人、波浪能发电与运动补偿装置。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>山东靖达智能装备有限公司 - 碳纤维复合材料智能装备</title>
   <link rel="shortcut icon" href="/jingda/images/favicon.ico">
@@ -16,20 +16,42 @@
 <header id="header" class="header jd-header">
   <div class="container">
     <nav class="navbar jd-navbar">
-      <a class="brand" href="/jingda/"><img class="logo" src="/jingda/images/logo2.png" alt="山东靖达智能装备有限公司"></a>
+      <input type="checkbox" id="jdMenu" class="jd-menu-check" hidden>
+      <div class="jd-brandbox">
+        <a class="brand" href="/jingda/"><img class="logo" src="/jingda/images/logo2.png" alt="山东靖达智能装备有限公司"></a>
+        <div class="jd-slogan">
+          <h1>专注碳纤维复合材料智能装备</h1>
+          <p>预浸料在线检测 / 声学隔膜植入 / 蜂窝片粘接 / 打磨机器人 / 水下机器人</p>
+        </div>
+      </div>
       <ul class="jd-nav">
         <li class="active"><a href="/jingda/">首页</a></li>
-        <li><a href="/jingda/products/">产品</a></li>
-        <li><a href="/jingda/news/">新闻</a></li>
-        <li><a href="/jingda/about/">关于</a></li>
+        <li><a href="/jingda/products/">产品中心</a>
+          <div class="jd-sub">
+            <ul>
+              <li><a href="/jingda/products/jiance-xitong/">碳纤维预浸料线扫描检测系统</a></li>
+              <li><a href="/jingda/products/shengxue-zhiru/">声学隔膜自动植入设备</a></li>
+              <li><a href="/jingda/products/fengwo-nianjie/">半六边形片材节点自动胶接机</a></li>
+              <li><a href="/jingda/products/damo-jiqiren/">航天复合材料壳体打磨机器人</a></li>
+              <li><a href="/jingda/products/haishen-bulao-jiqiren/">水下海参（刺参）捕捞机器人</a></li>
+              <li><a href="/jingda/products/shuixia-qingli-jiqiren/">水下清理机器人</a></li>
+              <li><a href="/jingda/products/bolangneng-fadian/">波浪能发电装置</a></li>
+              <li><a href="/jingda/products/bolang-buchang/">波浪运动补偿装置</a></li>
+            </ul>
+          </div></li>
+        <li><a href="/jingda/news/">新闻中心</a></li>
+        <li><a href="/jingda/about/">关于我们</a></li>
       </ul>
+      <label for="jdMenu" class="jd-menu-btn" aria-label="菜单"><span></span><span></span><span></span></label>
+      <div class="jd-headtel">
+        <div>
+          <span class="tip">服务热线</span>
+          <a class="num" href="tel:15688666804">15688666804</a>
+        </div>
+      </div>
     </nav>
   </div>
-</header>
-
-<div class="jd-topline">
-  <div class="container"><span>服务热线：15688666804</span></div>
-</div><!-- ===== 图片轮播 ===== -->
+</header><!-- ===== 首页轮播 ===== -->
 <section class="jd-slider">
   <div class="container">
     <div class="jd-slider-frame" id="jdSliderFrame">
@@ -40,116 +62,237 @@
       <div class="jd-slide"><img src="/jingda/image_0/688b2acdcc35295563ded489a9fb093e.jpg" alt="山东靖达智能装备有限公司" loading="lazy" decoding="async"></div>
       <button class="jd-arrow jd-prev" type="button" aria-label="上一张">‹</button>
       <button class="jd-arrow jd-next" type="button" aria-label="下一张">›</button>
-    </div>
-    <div class="jd-dots" id="jdDots">
-      <button type="button" class="active" aria-label="第1张"></button>
-      <button type="button" aria-label="第2张"></button>
-      <button type="button" aria-label="第3张"></button>
-      <button type="button" aria-label="第4张"></button>
-      <button type="button" aria-label="第5张"></button>
+      <div class="jd-dots" id="jdDots">
+        <button type="button" class="active" aria-label="第1张"></button>
+        <button type="button" aria-label="第2张"></button>
+        <button type="button" aria-label="第3张"></button>
+        <button type="button" aria-label="第4张"></button>
+        <button type="button" aria-label="第5张"></button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 产品服务 ===== -->
-<section class="jd-products">
+<!-- ===== 产品中心 ===== -->
+<section class="jd-sec reveal">
   <div class="container">
-    <div class="jd-section-title">
-      <h2>产品服务</h2>
-      <span>WHAT WE DO</span>
+    <div class="jd-sec-head reveal">
+      <h2>产品中心</h2>
+      <span class="en">PRODUCT CENTER</span>
     </div>
-    <div class="jd-product-grid">
+    <div class="jd-product-grid reveal">
       <a class="jd-product-card" href="/jingda/products/jiance-xitong/">
         <div class="jd-product-img"><img src="/jingda/images/serve/4.jpg" alt="碳纤维预浸料线扫描检测系统" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">检测系统</span>
-          <h3>碳纤维预浸料线扫描检测系统</h3>
-          <p>胶膜 / 碳纤维预浸料表面缺陷在线视觉检测，线扫描成像方案，表面缺陷检测精度 0.06mm。</p>
-        </div>
+        <div class="jd-product-body"><span class="jd-tag">检测系统</span><h3>碳纤维预浸料线扫描检测系统</h3><p>胶膜 / 碳纤维预浸料表面缺陷在线视觉检测，线扫描成像方案，表面缺陷检测精度 0.06mm。</p></div>
       </a>
       <a class="jd-product-card" href="/jingda/products/shengxue-zhiru/">
-        <div class="jd-product-img"><img src="/jingda/images/serve/3.jpg" alt="声学隔膜植入设备" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">植入设备</span>
-          <h3>声学隔膜自动植入设备</h3>
-          <p>集成输送、视觉定位、涂胶、声学布裁切与隔膜植入全流程，视觉对位精度 ±0.15mm，植入速度 ≥20 个/分钟。</p>
-        </div>
+        <div class="jd-product-img"><img src="/jingda/images/serve/3.jpg" alt="声学隔膜自动植入设备" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">植入设备</span><h3>声学隔膜自动植入设备</h3><p>集成输送、视觉定位、涂胶、声学布裁切与隔膜植入全流程，视觉对位精度 ±0.15mm，植入速度 ≥20 个/分钟。</p></div>
       </a>
       <a class="jd-product-card" href="/jingda/products/fengwo-nianjie/">
-        <div class="jd-product-img"><img src="/jingda/images/serve/1.jpg" alt="蜂窝片粘接设备" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">粘接设备（蜂窝片粘接设备）</span>
-          <h3>半六边形片材节点自动胶接机</h3>
-          <p>半六边形片材节点自动涂胶、对位叠合、热压固化，节点对中精度 ±0.1mm，实现蜂窝板节点自动化胶接成型。</p>
-        </div>
+        <div class="jd-product-img"><img src="/jingda/images/serve/1.jpg" alt="半六边形片材节点自动胶接机" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">粘接设备</span><h3>半六边形片材节点自动胶接机</h3><p>半六边形片材节点自动涂胶、对位叠合、热压固化，节点对中精度 ±0.1mm，实现蜂窝板节点自动化胶接成型。</p></div>
       </a>
       <a class="jd-product-card" href="/jingda/products/damo-jiqiren/">
-        <div class="jd-product-img"><img src="/jingda/images/serve/6.jpg" alt="打磨机器人" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">打磨机器人（桁架-串并混联打磨设备）</span>
-          <h3>航天复合材料壳体打磨机器人</h3>
-          <p>桁架机械手 + 串并混联机械手组合构型，柔性恒力打磨，面打磨效率 1m²/3min，边线线速度 3m/min。</p>
-        </div>
+        <div class="jd-product-img"><img src="/jingda/images/serve/6.jpg" alt="航天复合材料壳体打磨机器人" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">打磨机器人</span><h3>航天复合材料壳体打磨机器人</h3><p>桁架机械手 + 串并混联机械手组合构型，柔性恒力打磨，面打磨效率 1m²/3min，边线线速度 3m/min。</p></div>
       </a>
       <a class="jd-product-card" href="/jingda/products/haishen-bulao-jiqiren/">
-        <div class="jd-product-img"><img src="/jingda/images/serve/2.jpg" alt="水下海参捕捞机器人" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">水下机器人</span>
-          <h3>水下海参（刺参）捕捞机器人</h3>
-          <p>水下自主识别 + 无损自动化采捕，作业深度 30m，识别准确率 ≥90%，作业效率相比人工提升 3 倍以上。</p>
-        </div>
+        <div class="jd-product-img"><img src="/jingda/images/serve/2.jpg" alt="水下海参（刺参）捕捞机器人" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">水下机器人</span><h3>水下海参（刺参）捕捞机器人</h3><p>水下自主识别 + 无损自动化采捕，作业深度 30m，识别准确率 ≥90%，作业效率相比人工提升 3 倍以上。</p></div>
+      </a>
+      <a class="jd-product-card" href="/jingda/products/shuixia-qingli-jiqiren/">
+        <div class="jd-product-img"><img src="/jingda/images/serve/5.jpg" alt="水下清理机器人" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">水下机器人</span><h3>水下清理机器人</h3><p>八螺旋桨矢量推进 + 推力吸附 + 空化射流，水下作业深度 ≥300m，连续作业 ≥8h。</p></div>
       </a>
       <a class="jd-product-card" href="/jingda/products/bolangneng-fadian/">
         <div class="jd-product-img"><img src="/jingda/images/serve/8.jpg" alt="波浪能发电装置" loading="lazy" decoding="async"></div>
-        <div class="jd-product-body">
-          <span class="jd-tag">海洋能源</span>
-          <h3>波浪能发电装置</h3>
-          <p>浮体与底盘相对运动驱动压力缸，经液压 / 能量转换回路发电；底盘可固定于海底或水下，兼顾浅水与深水应用。</p>
-        </div>
+        <div class="jd-product-body"><span class="jd-tag">海洋能源</span><h3>波浪能发电装置</h3><p>浮体与底盘相对运动驱动压力缸，经液压 / 能量转换回路发电；底盘可固定于海底或水下，兼顾浅水与深水应用。</p></div>
+      </a>
+      <a class="jd-product-card" href="/jingda/products/bolang-buchang/">
+        <div class="jd-product-img"><img src="/jingda/images/serve/7.jpg" alt="波浪运动补偿装置" loading="lazy" decoding="async"></div>
+        <div class="jd-product-body"><span class="jd-tag">海洋工程</span><h3>波浪运动补偿装置</h3><p>主动式 6 自由度波浪运动补偿，绳驱动 / 电机绞盘调节载货平台位姿，用于海上补给、吊装与船舶间货物转运。</p></div>
       </a>
     </div>
-    <div class="jd-more"><a href="/jingda/products/">查看全部产品 →</a></div>
+    <div class="jd-more"><a class="jd-btn ghost" href="/jingda/products/">查看全部产品 →</a></div>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
-<footer class="jd-footer">
+<!-- ===== 数据亮带 ===== -->
+<section class="jd-stats reveal">
   <div class="container">
-    <div class="jd-footer-grid">
-      <div class="jd-footer-col">
-        <h5>联系我们</h5>
-        <p>联系人：陈经理</p>
-        <p>邮箱：cyzghysy@163.com</p>
-        <p>地址：山东省威海临港经济技术开发区江苏东路碳纤维产业研究院大楼509室</p>
-      </div>
-      <div class="jd-footer-col">
-        <h5>快速导航</h5>
-        <ul>
-          <li><a href="/jingda/">首页</a></li>
-          <li><a href="/jingda/products/">产品服务</a></li>
-          <li><a href="/jingda/news/">新闻动态</a></li>
-          <li><a href="/jingda/about/">关于我们</a></li>
+    <div class="jd-sec-head reveal">
+      <h2>靖达智能 · 实力保障</h2>
+      <span class="en">STRENGTH GUARANTEE</span>
+    </div>
+    <div class="jd-stat-grid reveal">
+      <div class="jd-stat"><div class="num">6</div><div class="label">系列化智能装备</div></div>
+      <div class="jd-stat"><div class="num">50+</div><div class="label">合作客户</div></div>
+      <div class="jd-stat"><div class="num">20+</div><div class="label">技术专利</div></div>
+      <div class="jd-stat"><div class="num">4</div><div class="label">大行业应用领域</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 应用领域 ===== -->
+<section class="jd-sec gray reveal">
+  <div class="container">
+    <div class="jd-sec-head reveal">
+      <h2>应用领域</h2>
+      <span class="en">APPLICATION</span>
+    </div>
+    <div class="jd-apps reveal">
+      <a class="jd-app" href="/jingda/2024/08/11/app1/"><img src="/jingda/images/opt/app-1-1600.jpg" alt="航空航天" loading="lazy" decoding="async"><span>航空航天</span></a>
+      <a class="jd-app" href="/jingda/2024/08/11/app3/"><img src="/jingda/images/opt/sample-fengdian2-1600.jpg" alt="能源电子" loading="lazy" decoding="async"><span>能源电子</span></a>
+      <a class="jd-app" href="/jingda/2024/08/11/app2/"><img src="/jingda/images/opt/app-3-1600.jpg" alt="医疗器械" loading="lazy" decoding="async"><span>医疗器械</span></a>
+      <a class="jd-app" href="/jingda/2023/09/08/searobot/"><img src="/jingda/images/opt/sample-sea-1600.jpg" alt="海洋装备" loading="lazy" decoding="async"><span>海洋装备</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 资质认证 ===== -->
+<section class="jd-sec reveal">
+  <div class="container">
+    <div class="jd-sec-head reveal">
+      <h2>资质认证</h2>
+      <span class="en">CERTIFICATION</span>
+    </div>
+    <div class="jd-cert reveal">
+      <div class="jd-cert-img"><img src="/jingda/images/cert/iso9001-1.jpg" alt="ISO 9001 质量管理体系认证证书" loading="lazy" decoding="async"></div>
+      <div class="jd-cert-body">
+        <h3>ISO 9001 质量管理体系认证</h3>
+        <p>公司已通过 ISO 9001 质量管理体系认证，建立并运行覆盖产品研发、设计、制造与销售全过程的质量管理体系，确保产品质量稳定可靠、交付可控可追溯。</p>
+        <ul class="jd-cert-list">
+          <li>设计开发、采购、生产、检验全流程标准化管控</li>
+          <li>关键工序工艺参数可追溯，质量记录完整留存</li>
+          <li>出厂检验与售后跟踪闭环，持续改进产品质量</li>
         </ul>
-      </div>
-      <div class="jd-footer-col">
-        <h5>产品分类</h5>
-        <ul>
-          <li><a href="/jingda/products/jiance-xitong/">检测系统</a></li>
-          <li><a href="/jingda/products/shengxue-zhiru/">植入设备</a></li>
-          <li><a href="/jingda/products/fengwo-nianjie/">粘接设备</a></li>
-          <li><a href="/jingda/products/damo-jiqiren/">打磨机器人</a></li>
-          <li><a href="/jingda/products/haishen-bulao-jiqiren/">水下机器人</a></li>
-        </ul>
+        <div class="jd-more" style="text-align:left;margin-top:2.6rem;">
+          <a class="jd-btn ghost" href="/jingda/about/#资质认证">查看证书详情 →</a>
+        </div>
       </div>
     </div>
-    <div class="jd-footer-bottom">
-      <p>© 2026 山东靖达智能装备有限公司 &nbsp; <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备2023009339号-1</a></p>
+  </div>
+</section>
+
+<!-- ===== 新闻中心 ===== -->
+<section class="jd-sec gray reveal">
+  <div class="container">
+    <div class="jd-sec-head reveal">
+      <h2>新闻中心</h2>
+      <span class="en">NEWS</span>
+    </div>
+    <div class="jd-news-wrap reveal">
+      <a class="jd-news-feature" href="/jingda/2024/06/21/damo/">
+        <img src="/jingda/images/opt/sample-damo-1600.jpg" alt="军工航天打磨机器人" loading="lazy" decoding="async">
+        <div class="txt">
+          <h3>军工航天打磨机器人</h3>
+          <p>产品表面加工质量要求高，人工打磨受经验与精力影响差异大。靖达智能已为军工航天行业提供完整的产品与解决方案。</p>
+          <time>2024-06-20</time>
+        </div>
+      </a>
+      <ul class="jd-news-list">
+        <li><a href="/jingda/2024/06/12/c919/">
+          <h4>C919与芳纶蜂窝</h4>
+          <p>大飞机被誉为工业皇冠上的明珠，“一代飞机，一代材料”。C919 的舱门与客货舱地板使用了芳纶蜂窝材料。</p>
+          <time>2024-06-12</time>
+        </a></li>
+        <li><a href="/jingda/2023/09/08/searobot/">
+          <h4>水下机器人</h4>
+          <p>近些年随着技术发展，我国智慧海洋建设飞速发展，正推动海洋传统行业数字化、绿色化、智能化升级。</p>
+          <time>2023-09-07</time>
+        </a></li>
+        <li><a href="/jingda/2023/06/15/wec/">
+          <h4>波浪能发电</h4>
+          <p>“南鲲”号投入试运行，我国波浪能发电技术水平再上新台阶。</p>
+          <time>2023-06-14</time>
+        </a></li>
+      </ul>
+    </div>
+    <div class="jd-more"><a class="jd-btn ghost" href="/jingda/news/">更多新闻资讯 →</a></div>
+  </div>
+</section>
+
+<footer class="jd-footer">
+  <div class="jd-footer-quick">
+    <div class="container">
+      <ul>
+        <li><a href="/jingda/products/">智能装备产品中心</a></li>
+        <li><a href="/jingda/news/">新闻资讯</a></li>
+        <li><a href="/jingda/about/">走进靖达</a></li>
+        <li><a href="/jingda/about/#联系我们">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="jd-footer-main">
+    <div class="container">
+      <div class="jd-footer-grid">
+        <div class="jd-footer-col">
+          <h5>产品中心</h5>
+          <ul>
+            <li><a href="/jingda/products/jiance-xitong/">碳纤维预浸料线扫描检测系统</a></li>
+            <li><a href="/jingda/products/shengxue-zhiru/">声学隔膜自动植入设备</a></li>
+            <li><a href="/jingda/products/fengwo-nianjie/">半六边形片材节点自动胶接机</a></li>
+            <li><a href="/jingda/products/damo-jiqiren/">航天复合材料壳体打磨机器人</a></li>
+            <li><a href="/jingda/products/haishen-bulao-jiqiren/">水下海参（刺参）捕捞机器人</a></li>
+            <li><a href="/jingda/products/shuixia-qingli-jiqiren/">水下清理机器人</a></li>
+            <li><a href="/jingda/products/bolangneng-fadian/">波浪能发电装置</a></li>
+            <li><a href="/jingda/products/bolang-buchang/">波浪运动补偿装置</a></li>
+          </ul>
+        </div>
+        <div class="jd-footer-col">
+          <h5>快速导航</h5>
+          <ul>
+            <li><a href="/jingda/">首页</a></li>
+            <li><a href="/jingda/products/">产品中心</a></li>
+            <li><a href="/jingda/news/">新闻中心</a></li>
+            <li><a href="/jingda/about/">关于我们</a></li>
+            <li><a href="/jingda/about/#资质认证">资质认证</a></li>
+          </ul>
+        </div>
+        <div class="jd-footer-col">
+          <h5>应用领域</h5>
+          <ul>
+            <li><a href="/jingda/2024/08/11/app1/">航空航天</a></li>
+            <li><a href="/jingda/2024/08/11/app3/">能源电子</a></li>
+            <li><a href="/jingda/2024/08/11/app2/">医疗器械</a></li>
+            <li><a href="/jingda/2023/09/08/searobot/">海洋装备</a></li>
+          </ul>
+        </div>
+        <div class="jd-footer-col jd-footer-contact">
+          <h5>联系我们</h5>
+          <p>联系人：陈经理</p>
+          <p>邮箱：<a href="mailto:cyzghysy@163.com">cyzghysy@163.com</a></p>
+          <p>地址：山东省威海临港经济技术开发区江苏东路碳纤维产业研究院大楼509室</p>
+        </div>
+      </div>
+      <div class="jd-footer-bottom">
+        <p>© 2026 山东靖达智能装备有限公司 &nbsp; <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鲁ICP备2023009339号-1</a></p>
+      </div>
     </div>
   </div>
 </footer>
 
 </main>
 
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js-reveal');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
 <script src="/jingda/js/home-slider.js"></script>
+
+<div class="jd-float">
+  <a class="jd-float-item" href="tel:15688666804"><span class="ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l1.9-1.9c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.1 20 4 13.9 4 6.3c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-1.9 1.9z"/></svg></span>电话
+    <span class="jd-float-pop"><span>服务热线</span><b>15688666804</b></span>
+  </a>
+  <a class="jd-float-item" href="mailto:cyzghysy@163.com"><span class="ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 8.2 8-5.2H4l8 5.2zM4 8.5V17h16V8.5l-8 5.2-8-5.2z"/></svg></span>邮箱
+    <span class="jd-float-pop"><span>商务邮箱</span><b>cyzghysy@163.com</b></span>
+  </a>
+  <a class="jd-float-item" href="javascript:;" onclick="window.scrollTo({top:0,behavior:'smooth'});"><span class="ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l8 8h-5v8H9v-8H4l8-8z"/></svg></span>顶部</a>
+</div>
 </body>
 </html>
