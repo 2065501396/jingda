@@ -642,3 +642,24 @@ hr.hr{border-bottom:1px solid var(--jd-line)}
 @media(max-width:768px){
   .page-heading,.banner{padding-left:calc(50vw - 50% + 1.6rem);padding-right:calc(50vw - 50% + 1.6rem)}
 }
+
+/* 详情页配色统一到参考站主色 */
+.jd-detail-img{background:#fff;border:1px solid var(--jd-line)}
+.jd-detail-body p{color:var(--jd-gray)}
+.jd-detail-info{background:var(--jd-light);border:1px solid var(--jd-line)}
+.jd-detail-info p{color:#4a5b6e}
+.jd-detail-info strong{color:var(--jd-blue)}
+.jd-detail-links a{background:var(--jd-blue)}
+.jd-detail-links a:hover{background:var(--jd-blue-d)}
+.jd-detail-links a.ghost{background:#fff;color:var(--jd-blue);border-color:var(--jd-blue)}
+.jd-detail-links a.ghost:hover{background:var(--jd-blue);color:#fff}
+.jd-doc h2{border-bottom:2px solid var(--jd-line);color:#1a1a1a}
+.jd-doc h3{color:var(--jd-blue)}
+.jd-doc ol,.jd-doc ul,.jd-doc p{color:var(--jd-gray)}
+.jd-doc li strong{color:#1a1a1a}
+.jd-spec th{background:var(--jd-light);color:var(--jd-blue)}
+.jd-spec td{color:var(--jd-gray)}
+.jd-note{background:#eef6fc;border-left:4px solid var(--jd-blue);color:#3f5567}
+.jd-note strong{color:var(--jd-blue)}
+.jd-pager a{color:var(--jd-blue)}
+.jd-crumb a{color:var(--jd-blue)}
